@@ -32,9 +32,16 @@ Monolithic applications usually scale as a unit, leaving little room to scale on
 _Green Software Foundation alignment: [Energy efficiency](sustainability-design-principles.md#energy-efficiency), [Hardware efficiency](sustainability-design-principles.md#hardware-efficiency)_
 
 **Recommendation:**
-
-- Evaluate the [microservice architecture](/azure/architecture/guide/architecture-styles/microservices) guidance.
 - A microservice architecture allows for scaling of only the necessary components during peak load; ensuring idle components are scaled down or in. Additionally, it may reduce the overhead and resources required for deploying monolithic applications.
+
+- Evaluate the [microservice architecture on AKS](/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices-advanced) guidance.
+- Then, Evaluate the [microservice advanced architecture on AKS](/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices-advanced) guidance.
+- Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
+- Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
+- Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
+
+**Potential tradeoffs:**
+
 - Consider this tradeoff: While reducing the compute resources required, you may increase the amount of traffic on the network, and the complexity of the application may increase significantly.
 - Consider this other tradeoff: Moving to microservices can result in extra deployment overhead with numerous similarities in deployment pipelines. Carefully consider the required deployment resources for monolithic versus microservice architectures.
 - Additionally, read about [containerizing monolithic applications](/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/monolithic-applications).
@@ -71,7 +78,10 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 **Recommendation:**
 
-- Leverage [cloud-native design patterns](/azure/architecture/patterns/) when writing or updating applications.
+- Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
+- Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
+- Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
+
 
 ### Consider using circuit breaker patterns
 
