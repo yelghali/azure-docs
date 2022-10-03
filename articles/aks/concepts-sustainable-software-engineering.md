@@ -99,6 +99,11 @@ We recommend that readers familiarize themselves with these design areas, review
 
 **Optimize networking**
 - Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
+- Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
+- Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+- Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
+- Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
+
 
 **Optimize storage persistence**
 - (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
@@ -118,7 +123,11 @@ We recommend that readers familiarize themselves with these design areas, review
  - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
  - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
 - Perform [ongoing load testing activities](/azure/load-testing/overview-what-is-azure-load-testing) that exercise both the pod and cluster autoscaler.
-- [Monitor & Optimize](/azure/azure-monitor/containers/container-insights-overview)
+- Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+- USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+- [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+- [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
+- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
 
 
 
