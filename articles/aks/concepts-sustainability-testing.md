@@ -43,7 +43,8 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 - Keeps the compute utilization high, based on the current demand, avoiding unnecessary capacity allocation.
 - Only scale out when necessary, and when not testing, scale in. Ultimately this ensures there's no idle compute resources in test environments.
-- Consider optimized platform services like containers over testing in a VM, utilizing the platform to reduce maintenance.
+- Consider optimized platform services like AKS over testing in a VM, utilizing the platform to reduce maintenance.
+- Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
 ## Profiling and measuring
 
@@ -70,8 +71,11 @@ _Green Software Foundation alignment: [Measuring sustainability](sustainability-
 
 **Recommendation:**
 
-- Use load testing or [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
-- _Consider this tradeoff:_ Injecting fault during chaos engineering and increasing the load on any system also increases the emissions used for the testing resources. Evaluate how and when you can utilize chaos engineering to increase the workload reliability while considering the climate impact of running unnecessary testing sessions.
+- Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
+
+**Potential tradeoffs:**
+
+- _ Injecting fault during chaos engineering and increasing the load on any system also increases the emissions used for the testing resources. Evaluate how and when you can utilize chaos engineering to increase the workload reliability while considering the climate impact of running unnecessary testing sessions.
 - Another angle to this is using chaos engineering to test energy faults or moments with higher carbon emissions: consider setting up tests that will challenge your application to consume the minimum possible energy. Define how the application will react to such conditions with a specific "eco" version informing users that they're emitting the minimum possible carbon by sacrificing some features and possibly some performance. This can also be your benchmark application for scoring its sustainability.
 
 ### Establish CPU and Memory thresholds in testing
@@ -84,9 +88,14 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 **Recommendation:**
 
+- Use [Virtual Pod Autoscaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage.
+- Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
+- Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 - Monitor CPU and memory allocations when running integration tests or unit tests.
-- Find abnormally high resource consumption areas in the application code and focus on mitigating those first.
 - Configure alerts or test failures if surpassing the established baseline values, helping avoid deploying non-sustainable workloads.
+
+**Potential tradeoffs:**
+
 - Consider this tradeoff: As applications grow, the baseline may need to shift accordingly to avoid failing the tests when introducing new features.
 
 ## Next step
