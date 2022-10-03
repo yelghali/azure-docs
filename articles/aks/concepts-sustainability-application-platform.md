@@ -8,9 +8,11 @@ ms.date: 03/29/2021
 
 # Sustainable software engineering practices in Azure Kubernetes Service (AKS)
 
-## Sustainability Design Considerations for AKS clusters
-
 The following considerations are aligned with the [Application platform](/azure/architecture/framework/sustainability/sustainability-application-platform.md) Sustainability Design Area, and provide more details on the recommendations in the Sustainability Checklist above.
+
+## Platform and service updates
+
+Keep platform and services up to date to leverage the latest performance improvements and energy optimizations.
 
 ### Review platform and service updates regularly 
 
@@ -27,7 +29,11 @@ _sustainability design principles: [Energy efficiency](sustainability-design-pri
 **Potential tradeoffs**
    - Consider backward compatibility and hardware reusability. An upgrade may not be the most efficient solution if the software or the OS isn't supported.
 
+## Regional differences
 
+The Microsoft Azure data centers are geographically spread across the planet and powered using different energy sources. Making decisions around where to deploy your workloads can significantly impact the emissions your solutions produce.
+
+Learn more about [sustainability from the data center to the cloud with Azure](https://www.microsoft.com/sustainability/azure).
 
 ### Deploy to low-carbon regions
 
@@ -92,6 +98,9 @@ _sustainability design principles: [Carbon awareness](sustainability-design-prin
 **Potential tradeoffs**
    - Time Scheduling constraints for workloads having several dependencies.
 
+## Modernization
+
+Consider these platform design decisions when choosing how to operate workloads. Leveraging managed services and highly optimized platforms in Azure helps build cloud-native applications that inherently contribute to a better sustainability posture.
 
 ### Containerize workloads where applicable
 
@@ -145,6 +154,9 @@ _sustainability design principles: [Hardware efficiency](sustainability-design-p
 - Consider the tradeoff: When Azure needs the capacity back, the VMs get evicted. Learn more about the SPOT VM [eviction policy](/azure/virtual-machines/spot-vms#eviction-policy).
 - [Spot node pools limitations](/azure/aks/spot-node-pool#limitations) 
 
+## Right sizing
+
+Ensuring workloads use all the allocated resources helps deliver a more sustainable workload. Oversized services are a common cause of more carbon emissions.
 
 ### Turn off workloads outside of business hours
 
