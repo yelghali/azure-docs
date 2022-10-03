@@ -59,8 +59,9 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 **Recommendation:**
 
 - Use [storage best suited for the application's data access patterns](/azure/architecture/guide/design-principles/use-best-data-store).
-- Make sure your most frequent data is stored in hot storage, making it easy to retrieve and doesn't require more processing to access.
-- Infrequently used data should be stored in cold or offline archive storage, using less energy.
+- Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
+- Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
+- [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 
 ### Only store what is relevant
 
