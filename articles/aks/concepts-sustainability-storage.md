@@ -72,6 +72,7 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 **Recommendation:**
 
 - Implement policies to streamline the process of storing and keeping relevant information. [Microsoft Purview](/azure/purview/overview) can help label data and add time-based purging to delete it after a retention period automatically. Additionally, this lets you stay in control of your data and reduces the amount of data to process and transfer.
+- Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
 - Workloads integrated with Azure Monitor can rely on [Data Collection Rules (DCR)](/azure/azure-monitor/essentials/data-collection-rule-overview) to specify what data should be collected, how to transform that data, and where to send the data.
 
 ### Determine the most suitable access tier for blob data
@@ -92,7 +93,9 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 **Recommendation:**
 
-- Read more about the [impact of expired recovery points for items in soft deleted state](/azure/backup/manage-recovery-points#impact-of-expired-recovery-points-for-items-in-soft-deleted-state).
+
+- (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
+- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
 ### Revise backup and retention policies
 
@@ -115,6 +118,7 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 - Make sure you are logging and retaining only data that is relevant to your needs.
 - Read more about the [Cost optimization and Log Analytics](/azure/architecture/framework/services/monitoring/log-analytics/cost-optimization).
+- Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
 
 ## Next step
 
