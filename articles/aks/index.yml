@@ -60,6 +60,8 @@ landingContent:
             url: concepts-storage.md
           - text: Scale
             url: concepts-scale.md
+           - text: Sustainability
+            url: concepts-sustainable-software-engineering.md
       - linkListType: learn
         links:
           - text: Introduction to Azure Kubernetes Service
