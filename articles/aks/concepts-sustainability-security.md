@@ -35,7 +35,7 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
-- 
+
 **Potential Tradeoffs:**
 - Consider this tradeoff: Deploying more monitoring agents will increase the overhead in processing as it needs more compute resources. Carefully design and plan for how much information is needed to cover the security requirements of the solution and find a suitable level of information to store and keep.
 
