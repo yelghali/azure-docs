@@ -33,10 +33,12 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 **Recommendation:**
 
-- Using cloud native [service-to-service connectors](/azure/sentinel/connect-data-sources#service-to-service-integration-for-data-connectors) simplify the integration between the services and the SIEM, and removes the overhead of extra infrastructure.
-- It's possible to ingest log data from existing compute resources using previously deployed agents such as the Azure Monitor Analytics agent. Review how to [migrate to Azure Monitor agent from Log Analytics agent](/azure/azure-monitor/agents/azure-monitor-agent-migration).
+- Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+- USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+- 
+**Potential Tradeoffs:**
 - Consider this tradeoff: Deploying more monitoring agents will increase the overhead in processing as it needs more compute resources. Carefully design and plan for how much information is needed to cover the security requirements of the solution and find a suitable level of information to store and keep.
-  - A possible solution to reduce unnecessary data collection is to rely on the [Azure Monitor Data Collection Rules (DCR)](/azure/azure-monitor/essentials/data-collection-rule-overview).
+
 
 ### Avoid transferring large unfiltered data sets from one cloud service provider to another
 
@@ -83,7 +85,10 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 **Recommendation:**
 
-- Use [Network security groups](/azure/virtual-network/network-security-groups-overview) and [Application security groups](/azure/virtual-network/application-security-groups) to help filter traffic at the source, and to remove the unnecessary data transmission. Using these capabilities can help reduce the burden on the cloud infrastructure, with lower bandwidth requirements and less infrastructure to own and manage.
+- Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
+- Use [Network Policies](/azure/aks/use-network-policies)
+- Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
+- Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
 ### Minimize routing from endpoints to the destination
 
@@ -118,6 +123,9 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+
+**Potential tradeoffs:**
+
 - Consider the tradeoff: A balanced level of security can offer a more sustainable and energy efficient workload while a higher level of security may increase the requirements on compute resources.
 
 ### Use DDoS protection
@@ -145,8 +153,9 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 
 **Recommendations:**
 
-- Integrate [Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint) with Defender for Cloud to identify and shut down crypto mining and botnets.
-  - The EDR capabilities provide advanced attack detections and are able to take response actions to remediate those threats. The unnecessary resource usage created by these common attacks can quickly be discovered and remediated, often without the intervention of a security analyst.
+- [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+- [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
+- The EDR capabilities provide advanced attack detections and are able to take response actions to remediate those threats. The unnecessary resource usage created by these common attacks can quickly be discovered and remediated, often without the intervention of a security analyst.
 
 ## Reporting
 
@@ -160,7 +169,7 @@ _Green Software Foundation alignment: [Measuring sustainability](sustainability-
 
 **Recommendation:**
 
-- Tag security resources to record emissions impact of security resources.
+- [Use Tags](/azure/aks/use-tags).
 
 ## Next step
 
