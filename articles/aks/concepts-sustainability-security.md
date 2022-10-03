@@ -123,6 +123,8 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+- Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
+- Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
 **Potential tradeoffs:**
 
