@@ -86,18 +86,18 @@ We recommend that readers familiarize themselves with these design areas, review
 - Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
 - Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
-**Consider Carbon Awareness in your design**
- - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
- - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
- - Consider deploying to data centers close to the consumer
- - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
-
 **Optimize resource usage**
  - Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
 - [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
 
  **Assess for Resilience and Performance**
 - Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
+
+**Consider Carbon Awareness in your design**
+ - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
+ - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
+ - Consider deploying to data centers close to the consumer
+ - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
 
 ## Sustainability Checklist for AKS clusters
