@@ -81,7 +81,6 @@ We recommend that readers familiarize themselves with these design areas, review
 - Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
 **Optimize networking**
-- Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
 - Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
