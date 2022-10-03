@@ -69,8 +69,8 @@ We recommend that readers familiarize themselves with these design areas, review
 
 **Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
-- Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
-- Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
+- Build serverless Applications using [Keda](https://keda.sh/) 
+- Build Microservices Applications using [Dapr](https://dapr.io/) 
 - Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
 **Optimize storage persistence**
