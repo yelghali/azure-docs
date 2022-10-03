@@ -146,13 +146,13 @@ We recommend that readers familiarize themselves with these design areas, review
  - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
  - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
-- USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+- Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
 
 
 ## Next step
 
-Review the design considerations for deployment and testing.
+Review the sustainability Operational procedures.
 
 > [!div class="nextstepaction"]
-> [Deployment and testing](/azure/architecture/framework/sustainability/sustainability-testing.md)
+> [Deployment and testing](/azure/architecture/framework/sustainability/sustainability-operational-procedures.md)
