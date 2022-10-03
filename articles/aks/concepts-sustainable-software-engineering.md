@@ -65,7 +65,7 @@ We recommend that readers familiarize themselves with these design areas, review
 
 
 
-## Sustainability Checklist for AKS workloads
+## For Product Teams: Sustainability Checklist for AKS workloads
 
 **Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
@@ -102,7 +102,7 @@ We recommend that readers familiarize themselves with these design areas, review
  - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
 
-## Sustainability Checklist for AKS clusters
+## For Platform Teams: Sustainability Checklist for AKS clusters
 
 **Enable Modernization of Applications**
 -  Use Keda as an [AKS addon](/azure/aks/keda-about)
