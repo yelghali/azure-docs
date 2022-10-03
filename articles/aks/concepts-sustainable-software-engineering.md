@@ -80,7 +80,7 @@ We recommend that readers familiarize themselves with these design areas, review
 - [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 - Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
-**Optimize network latency**
+**Optimize networking**
 - Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
@@ -108,6 +108,12 @@ We recommend that readers familiarize themselves with these design areas, review
 -  Use Darp as an [AKS addon](/azure/aks/dapr)
  - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
+**Scale based on demand**
+- Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
+- Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
+- Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
+- Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
+
   **Use Energy Efficient Hardware**
  - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
@@ -120,11 +126,8 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
-**Scale based on demand**
-- Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
-- Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
-- Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
-- Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
+**Reduce Network Latency**
+- Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
 **Secure endpoints and eliminate unnecessary network traffic**
 - Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
@@ -133,7 +136,6 @@ We recommend that readers familiarize themselves with these design areas, review
 - Filter [egress traffic](/azure/aks/limit-egress-traffic)
 - [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 - [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
-
 
 **Reduce Waste**
 - Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
