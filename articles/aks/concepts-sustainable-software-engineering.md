@@ -79,6 +79,7 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
 - [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 - Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
+- Define retention policies for storage, backups, logs
 
 **Optimize networking**
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
