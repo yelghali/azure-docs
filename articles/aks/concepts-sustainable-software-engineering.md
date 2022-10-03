@@ -109,7 +109,7 @@ We recommend that readers familiarize themselves with these design areas, review
 -  Use Darp as an [AKS addon](/azure/aks/dapr)
  - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
-**Scale based on demand**
+**Scale cluster resources, based on demand**
 - Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
 - Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
 - Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
