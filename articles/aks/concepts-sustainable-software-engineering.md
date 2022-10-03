@@ -56,7 +56,7 @@ We recommend that readers familiarize themselves with these design areas, review
 |Design area|Description|
 |---|---|
 |Application design|Modernize Applications to allow independent optimization of their logical components|
-|Application platform|**AKS cluster is the Platform**|
+|[Application platform][concepts-sustainability-application-platform.md]|**AKS cluster is the Platform**|
 |Testing|Optimize Testing procedures for Cluster & workload development lifecycle|
 |Operational procedures|Implement sustainability operations (not a technical consideration)|
 |Storage| Consider _Statefless Vs Stateful Application_ Design ; Plan for storage classes & Backup retention policies.|
