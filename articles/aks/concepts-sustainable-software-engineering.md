@@ -116,7 +116,7 @@ We recommend that readers familiarize themselves with these design areas, review
 - Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
 - Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
-**Secure edpoints and eliminate unnecessary network traffic**
+**Secure endpoints and eliminate unnecessary network traffic**
 - Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
 - Use [Network Policies](/azure/aks/use-network-policies)
 - Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
