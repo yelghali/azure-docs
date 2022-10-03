@@ -64,6 +64,15 @@ We recommend that readers familiarize themselves with these design areas, review
 |[Security](concepts-sustainability-security.md)| Implement endpoint security and Optimize log collection for Monitoring & SIEM.|
 
 
+
+## Sustainability Checklist for AKS workloads
+
+**Modernize Applications to allow independent optimization of their logical components**
+ - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
+- Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
+- Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
+- Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
+
 ## Sustainability Checklist for AKS clusters
 
 **Modernize Applications to allow independent optimization of their logical components**
@@ -89,6 +98,9 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 - Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
+
+**Assess for Resilience and Performance**
+- Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
 
 **Scale based on demand**
 - Use [Keda](https://keda.sh/) to Auto-scale your applications based on demand.
@@ -126,10 +138,10 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to shut down applications (scale pods to zero), outside regular business hours.
 - Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 
-**Monitor & Optimize**
+**Optimize operations**
  - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
  - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
-- Perform [ongoing load testing activities](/azure/load-testing/overview-what-is-azure-load-testing) that exercise both the pod and cluster autoscaler.
+ - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
