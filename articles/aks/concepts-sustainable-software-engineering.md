@@ -97,13 +97,21 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
 - Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
 
-**Optimize networking**
+**Optimize network latency**
 - Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
 - Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
 - Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
+**Secure edpoints and eliminate unnecessary network traffic**
+- Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
+- Use [Network Policies](/azure/aks/use-network-policies)
+- Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
+- Filter [egress traffic](/azure/aks/limit-egress-traffic)
+- [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+- [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
+- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
 
 **Optimize storage persistence**
 - (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
@@ -111,7 +119,6 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
 - [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 - Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
-
 
 **Reduce Waste**
 - Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
@@ -125,9 +132,6 @@ We recommend that readers familiarize themselves with these design areas, review
 - Perform [ongoing load testing activities](/azure/load-testing/overview-what-is-azure-load-testing) that exercise both the pod and cluster autoscaler.
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
-- [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
-- [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
-- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
 
 
 
