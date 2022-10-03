@@ -92,9 +92,9 @@ We recommend that readers familiarize themselves with these design areas, review
  - Consider deploying to data centers close to the consumer
  - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
-**Enable reporting for emissions impact**
+**Optimize resource usage**
+ - Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
 - [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
-
 
  **Assess for Resilience and Performance**
 - Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
