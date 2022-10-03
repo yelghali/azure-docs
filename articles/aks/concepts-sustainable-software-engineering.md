@@ -84,6 +84,7 @@ We recommend that readers familiarize themselves with these design areas, review
 **Maximize Hardware utilization**
 - Separate applications into different node pools allowing independent sizing & scalling.
 - Align node SKU selection and managed disk size with applications requirements.
+- [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
 - [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 - Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 - Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
@@ -295,6 +296,7 @@ _sustainability design principles: [Hardware efficiency](sustainability-design-p
 
 - Separate applications into different node pools allowing independent scalling.
 - Align node SKU selection and managed disk size with applications requirements.
+- [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
 - [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 - Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
