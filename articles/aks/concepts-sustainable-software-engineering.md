@@ -155,4 +155,4 @@ We recommend that readers familiarize themselves with these design areas, review
 Review the sustainability Operational procedures.
 
 > [!div class="nextstepaction"]
-> [Deployment and testing](/azure/architecture/framework/sustainability/sustainability-operational-procedures.md)
+> [Operational procedures](/azure/architecture/framework/sustainability/sustainability-operational-procedures.md)
