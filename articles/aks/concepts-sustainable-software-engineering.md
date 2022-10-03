@@ -67,26 +67,47 @@ We recommend that readers familiarize themselves with these design areas, review
 
 ## Sustainability Checklist for AKS workloads
 
-**Modernize Applications to allow independent optimization of their logical components**
+**Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 - Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
 - Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
 - Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
-## Sustainability Checklist for AKS clusters
+**Optimize storage persistence**
+- (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
+- Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
+- Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
+- [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
+- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
-**Modernize Applications to allow independent optimization of their logical components**
- - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
-- Build serverless Applications using [Keda](https://keda.sh/) ; Use it as an [AKS addon](/azure/aks/keda-about)
-- Build Microservices Applications using [Dapr](https://dapr.io/) ; Use it as an [AKS addon](/azure/aks/dapr)
-- Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
+**Optimize network latency**
+- Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
+- Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
+- Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+- Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
+- Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
 **Consider Carbon Awareness in your design**
  - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
  - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
  - Consider deploying to data centers close to the consumer
  - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
-  
+
+**Enable reporting for emissions impact**
+- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
+
+
+ **Assess for Resilience and Performance**
+- Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
+
+
+## Sustainability Checklist for AKS clusters
+
+**Enable Modernization of Applications**
+-  Use Keda as an [AKS addon](/azure/aks/keda-about)
+-  Use Darp as an [AKS addon](/azure/aks/dapr)
+ - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
+
   **Use Energy Efficient Hardware**
  - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
@@ -99,22 +120,11 @@ We recommend that readers familiarize themselves with these design areas, review
 - Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
-**Assess for Resilience and Performance**
-- Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
-
 **Scale based on demand**
-- Use [Keda](https://keda.sh/) to Auto-scale your applications based on demand.
 - Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
 - Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
 - Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
 - Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
-
-**Optimize network latency**
-- Reduce Latency using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg)
-- Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
-- Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
-- Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
-- Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
 **Secure endpoints and eliminate unnecessary network traffic**
 - Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
@@ -123,14 +133,7 @@ We recommend that readers familiarize themselves with these design areas, review
 - Filter [egress traffic](/azure/aks/limit-egress-traffic)
 - [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 - [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
-- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
 
-**Optimize storage persistence**
-- (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
-- Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
-- Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
-- [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
-- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
 **Reduce Waste**
 - Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
@@ -141,7 +144,6 @@ We recommend that readers familiarize themselves with these design areas, review
 **Optimize operations**
  - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
  - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
- - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - USe [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
