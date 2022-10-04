@@ -49,7 +49,7 @@ Decisions made in one design area can impact or influence decisions across the e
 We recommend that readers familiarize themselves with these design areas, reviewing provided considerations and recommendations to better understand the consequences of encompassed decisions.
 
 ## Sustainability Design considerations for AKS workloads
- -  Sustainability considerations for your AKS workloads (or applications), should cover the All the Key Design Areas
+ -  Sustainability considerations for your AKS workloads (or applications), **should cover the All Key Sustainability Design Areas**
  -  The sustainability considerations for AKS clusters are aligned with Application Platform Area
  -  In practice, you should consider the hollistic lifecycle of your application, as Business requiements shape Workload design, which will inform cluster design
   
@@ -66,6 +66,10 @@ We recommend that readers familiarize themselves with these design areas, review
 
 
 ## For Product Teams: Sustainability Checklist for AKS workloads
+
+The following checklist provides recommendations for designing sustainable workloads, hosted on AKS. 
+
+As your workload end2end architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to Key sustainability design areas, for a more comprehensive approach.
 
 **Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
@@ -105,6 +109,10 @@ We recommend that readers familiarize themselves with these design areas, review
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
+The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, and operate as a "Green Platform". 
+
+The sustainability considerations for AKS clusters are aligned with [Application platform](concepts-sustainability-application-platform.md)
+   
 **Enable Modernization of Applications**
 -  Use Keda as an [AKS addon](/azure/aks/keda-about)
 -  Use Darp as an [AKS addon](/azure/aks/dapr)
