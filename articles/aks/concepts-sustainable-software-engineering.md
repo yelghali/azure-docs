@@ -69,7 +69,7 @@ We recommend that readers familiarize themselves with these design areas, review
 
 The following checklist provides recommendations for designing sustainable workloads, hosted on AKS. 
 
-As your workload end2end architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
+As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
 **Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
@@ -102,9 +102,7 @@ As your workload end2end architecture would typically include several Azure serv
 
 **Consider Carbon Awareness in your workload design**
  - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
- - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
  - Consider deploying to data centers close to the consumer
- - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
