@@ -167,7 +167,7 @@ _sustainability design principles: [Energy efficiency](sustainability-design-pri
 **Recommendations:**
 
 - Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
-- Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to shut down applications (scale pods to zero), outside regular business hours.
+- Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
 
 **Potential tradeoffs**
 
