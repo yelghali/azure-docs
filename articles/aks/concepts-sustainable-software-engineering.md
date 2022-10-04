@@ -55,13 +55,13 @@ We recommend that readers familiarize themselves with these design areas, review
   
 |Design area|Description|
 |---|---|
-|[Application design](concepts-sustainability-application-design.md)|Modernize Applications to allow independent optimization of their logical components|
+|[Application design](concepts-sustainability-application-design.md)|Modernize workloads to allow independent optimization of their logical components|
 |[Application platform](concepts-sustainability-application-platform.md)|**AKS cluster is the Platform**|
 |[Testing](concepts-sustainability-testing.md)|Optimize Testing procedures for Cluster & workload development lifecycle|
 |_Operational procedures_|Implement sustainability operations (not a technical consideration). Refer to the [WAF Operational procedures](/azure/architecture/framework/sustainability/sustainability-operational-procedures.md)|
-|[Storage](concepts-sustainability-storage.md)| Consider _Statefless Vs Stateful Application_ Design ; Plan for storage classes & Backup retention policies.|
-|[Network and connectivity](concepts-sustainability-networking.md)|Assess business requirements for availability (availability zones) and security (service mesh)|
-|[Security](concepts-sustainability-security.md)| Implement endpoint security and Optimize log collection for Monitoring & SIEM.|
+|[Storage](concepts-sustainability-storage.md)| Consider _Stateless Vs Stateful Application_ Design ; Plan for storage classes & Backup retention policies.|
+|[Network and connectivity](concepts-sustainability-networking.md)|Optimize network travel for workloads and clusters|
+|[Security](concepts-sustainability-security.md)| Implement Security and Optimize log collection for Monitoring & SIEM.|
 
 
 
