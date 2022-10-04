@@ -88,7 +88,7 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 **Recommendation:**
 
-- Use [Virtual Pod Autoscaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage.
+- Use [Vertical Pod Autoscaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage.
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 - Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 - Monitor CPU and memory allocations when running integration tests or unit tests.
