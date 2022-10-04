@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.date: 03/29/2021
 ---
 
-# Sustainability considerations for Azure Kubernetes Service (AKS) clusters
+# Sustainability considerations for Azure Kubernetes Service (AKS) Clusters
 
 The following considerations are aligned with the [Application platform](/azure/architecture/framework/sustainability/sustainability-application-platform.md) Sustainability Design Area, and provide more details on the recommendations in the Sustainability Checklist above.
 
