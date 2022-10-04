@@ -100,7 +100,7 @@ As your workload end2end architecture would typically include several Azure serv
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
-**Consider Carbon Awareness in your design**
+**Consider Carbon Awareness in your workload design**
  - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
  - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
  - Consider deploying to data centers close to the consumer
@@ -157,6 +157,9 @@ The following checklist provides recommendations for designing energy and hardwa
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 - Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
+**Consider Carbon Awareness in your workload orchestrations**
+ - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
+ - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
 
 ## Next step
