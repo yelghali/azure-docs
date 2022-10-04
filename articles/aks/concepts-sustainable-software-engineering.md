@@ -110,8 +110,6 @@ As your workload end2end architecture would typically include several Azure serv
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
-
-The sustainability considerations for AKS clusters are aligned with [Application platform](concepts-sustainability-application-platform.md)
    
 **Enable Modernization of Applications**
 -  Use Keda as an [AKS addon](/azure/aks/keda-about)
