@@ -25,30 +25,8 @@ Data storage in Azure is a crucial component of most provisioned workloads. Lear
 
 Build solutions with efficient storage to increase performance, lower the required bandwidth, and minimize unnecessary storage design climate impact.
 
-### Enable storage compression
+### 
 
-Storing much uncompressed data can result in unnecessary bandwidth waste and increase the storage capacity requirements.
-
-_Green Software Foundation alignment: [Hardware efficiency](sustainability-design-principles.md#hardware-efficiency)_
-
-**Recommendation:**
-
-- A solution to reduce the storage requirements, including both capacity and required bandwidth to write or retrieve data. For example, [compressing files in Azure Front Door](/azure/frontdoor/standard-premium/how-to-compression) and [compressing files in Azure CDN](/azure/cdn/cdn-improve-performance).
-- Compression is a well-known design technique to improve network performance.
-- Consider the tradeoff of compression: Does the benefit of compression outweigh the increased _carbon_ cost in the resources (CPU, RAM) needed to perform the compression/decompression?
-
-### Optimize database query performance
-
-Querying extensive databases or retrieving much information simultaneously can have a performance penalty. Ideally, apps should optimize for query performance.
-
-_Green Software Foundation alignment: [Energy efficiency](sustainability-design-principles.md#energy-efficiency)_
-
-**Recommendation:**
-
-- Reduces the latency of data retrieval while also reducing the load on the database.
-- Understand the [query performance for Azure SQL Databases](/azure/azure-sql/database/query-performance-insight-use)
-- There are many well-known ways to optimize data query performance, for example [tuning apps and databases for performance in an Azure SQL database](/azure/azure-sql/database/performance-guidance).
-- Consider that it may require fine-tuning to achieve optimal results.
 
 ### Use the best suited storage access tier
 
@@ -67,6 +45,8 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 
 Backup is a crucial part of reliability. However, storing backups indefinitely can quickly allocate much unnecessary disk space. Consider how you plan backup storage retention.
 
++ define storage class ; disk delete ; reclaim
+
 _Green Software Foundation alignment: [Hardware efficiency](sustainability-design-principles.md#hardware-efficiency)_
 
 **Recommendation:**
@@ -75,7 +55,7 @@ _Green Software Foundation alignment: [Hardware efficiency](sustainability-desig
 - Implement policies to streamline the process of storing and keeping relevant information. [Microsoft Purview](/azure/purview/overview) can help label data and add time-based purging to delete it after a retention period automatically. Additionally, this lets you stay in control of your data and reduces the amount of data to process and transfer.
 - Workloads integrated with Azure Monitor can rely on [Data Collection Rules (DCR)](/azure/azure-monitor/essentials/data-collection-rule-overview) to specify what data should be collected, how to transform that data, and where to send the data.
 
-### Determine the most suitable access tier for blob data
+### Determine the most suitable access tier for blob data (lifecycle)
 
 Consider whether to store data in an online tier or an offline tier. Online tiers are optimized for storing data that is accessed or modified frequently. Offline tiers are optimized for storing data that is rarely accessed.
 
