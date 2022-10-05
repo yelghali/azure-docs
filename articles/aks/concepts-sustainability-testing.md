@@ -21,17 +21,6 @@ Organizations developing and deploying solutions to the cloud also need reliable
 > [!IMPORTANT]
 > This article is part of the [Azure Well-Architected sustainable workload](index.yml) series. If you aren't familiar with this series, we recommend you start with [what is a sustainable workload?](sustainability-get-started.md#what-is-a-sustainable-workload)
 
-## Testing efficiency
-
-### Run integration, performance, load, or any other intense testing during low-carbon periods
-
-Running integration, performance, load, or any other intense testing capability may result in much processing. A well-crafted design for testing the deployed workloads can help ensure full utilization of the available resources, reducing carbon emissions.
-
-_Green Software Foundation alignment: [Carbon awareness](sustainability-design-principles.md#carbon-awareness)_
-
-**Recommendation:**
-
-- Where you have the data available to you, plan for running testing when the data center's energy mix primarily uses renewable energy. It may, for example, be more beneficial to run testing during the night in some regions.
 
 ### Automate CI/CD to scale worker agents as needed
 
