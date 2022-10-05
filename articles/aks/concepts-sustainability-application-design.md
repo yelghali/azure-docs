@@ -103,6 +103,23 @@ _Green Software Foundation alignment: [Energy efficiency](sustainability-design-
 - Monitor CPU and memory allocations when running integration tests or unit tests.
 - Configure alerts or test failures if surpassing the established baseline values, helping avoid deploying non-sustainable workloads.
 
+## Profiling and measuring
+
+Measuring, profiling, and testing workloads are imperative to understanding how to best use allocated resources.
+
+### Assess where parallelization is possible
+
+Without properly profiling and testing workloads, it's difficult to know if it's making the best use of the underlying platform and deployed resources.
+
+_Green Software Foundation alignment: [Measuring sustainability](sustainability-design-principles.md#measuring-sustainability)_
+
+**Recommendation:**
+
+- Test your applications to understand concurrent requests, simultaneous processing, and more.
+- If you're running Machine Learning (ML) for tests, consider machines with a GPU for better efficiency gains.
+- Identify if the workload is performance intensive and work toward optimization.
+- _Consider this tradeoff:_ Running GPU-based machines for ML tests may increase the cost.
+
 
 ### Assess with chaos engineering
 
