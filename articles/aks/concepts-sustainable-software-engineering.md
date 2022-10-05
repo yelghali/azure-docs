@@ -93,34 +93,9 @@ Optimize network:
 Testing
 
 
-Reduce waste:
-Turn off workloads outside of business hours
 
 -----
 
-
-Filter or exclude log sources before transmission or ingestion into a SIEM
-Match Utilization Requirements of Virtual Machines (VMs)
-Reduce Transmitted Data
-Use network security tools with auto-scaling capabilities
-Use DDoS protection
-Integrate Microsoft Defender for Endpoint
-Use cloud native network security controls to eliminate unnecessary network traffic
-Archive log data to long-term storage
-Filter or exclude log sources before transmission or ingestion into a SIEM
-Revise backup and retention policies
-Establish CPU and Memory thresholds in testing
-
-Maximize network utilization within the same cloud and region
-
-Process when the carbon intensity is low
-Use SPOT VMs where possible
-
-Utilize auto-scaling and bursting capabilities
-
-Match the scalability needs
-Evaluate Ampere Altra Arm-based processors for Virtual Machines
-Delete zombie workloads
 
 **Optimize code for efficient resource usage**
 
@@ -194,6 +169,8 @@ Optimize the collection of logs
  - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
  - Consider deploying to data centers close to the consumer
 
+Reduce waste:
+Turn off workloads outside of business hours
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
@@ -201,6 +178,29 @@ Choose A Region That Is Closest To Users
 
 Delete Unused Storage Resources
 
+
+Filter or exclude log sources before transmission or ingestion into a SIEM
+Match Utilization Requirements of Virtual Machines (VMs)
+Reduce Transmitted Data
+Use network security tools with auto-scaling capabilities
+Use DDoS protection
+Integrate Microsoft Defender for Endpoint
+Use cloud native network security controls to eliminate unnecessary network traffic
+Archive log data to long-term storage
+Filter or exclude log sources before transmission or ingestion into a SIEM
+Revise backup and retention policies
+Establish CPU and Memory thresholds in testing
+
+Maximize network utilization within the same cloud and region
+
+Process when the carbon intensity is low
+Use SPOT VMs where possible
+
+Utilize auto-scaling and bursting capabilities
+
+Match the scalability needs
+Evaluate Ampere Altra Arm-based processors for Virtual Machines
+Delete zombie workloads
 
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
