@@ -73,74 +73,7 @@ As your workload End2End architecture would typically include several Azure serv
 
 
 
-Choose A Region That Is Closest To Users
-
-Delete Unused Storage Resources
-
-Match Utilization Requirements of Virtual Machines (VMs)
-
-Optimize Storage Utilization
-
-Reduce Transmitted Data
-
-Set Storage Retention Policies
-
-Use network security tools with auto-scaling capabilities
-
-Evaluate whether to use TLS termination
-
-Use DDoS protection
-
-Integrate Microsoft Defender for Endpoint
-
-Tag security resources
-
-Use cloud native network security controls to eliminate unnecessary network traffic
-
-Archive log data to long-term storage
-
-
-Filter or exclude log sources before transmission or ingestion into a SIEM
-
-Avoid transferring large unfiltered data sets from one cloud service provider to another
-
-Use cloud native log collection methods where applicable
-
-Use the best suited storage access tier
-
-Only store what is relevant
-
-Revise backup and retention policies
-
-Optimize the collection of logs
-
-Select Azure regions based on where the customer resides
-
-Maximize network utilization within the same cloud and region
-
-Assess where parallelization is possible
-
-Assess with chaos engineering
-
-Establish CPU and Memory thresholds in testing
-
-Deploy to low-carbon regions
-
-Process when the carbon intensity is low
-
-Containerize workloads where applicable
-
-Use SPOT VMs where possible
-
-Turn off workloads outside of business hours
-
-Utilize auto-scaling and bursting capabilities
-
-Match the scalability needs
-Evaluate Ampere Altra Arm-based processors for Virtual Machines
-
-Delete zombie workloads
-
+Design:
 Evaluate moving monoliths to a microservice architecture
 
 Leverage cloud native design patterns
@@ -150,13 +83,64 @@ Consider using circuit breaker patterns
 Optimize code for efficient resource usage
 
 Optimize for async access patterns
+Assess where parallelization is possible
+Containerize workloads where applicable
+
+
+Deploy to the Right Region:
+Select Azure regions based on where the customer resides
+Deploy to low-carbon regions
+
+reporting : tag resources
+
+Optimize storage:
+
+Optimize Storage Utilization
+Use the best suited storage access tier
+Only store what is relevant
+Set Storage Retention Policies
+Revise backup and retention policies
 
 
 
+Optimize network:
+Evaluate whether to use TLS termination
+Optimize the collection of logs
+Reduce Transmitted Data
 
 
+Testing
+Assess with chaos engineering
+Establish CPU and Memory thresholds in testing
+
+Reduce waste:
+Turn off workloads outside of business hours
+
+-----
 
 
+Filter or exclude log sources before transmission or ingestion into a SIEM
+Match Utilization Requirements of Virtual Machines (VMs)
+Reduce Transmitted Data
+Use network security tools with auto-scaling capabilities
+Use DDoS protection
+Integrate Microsoft Defender for Endpoint
+Use cloud native network security controls to eliminate unnecessary network traffic
+Archive log data to long-term storage
+Filter or exclude log sources before transmission or ingestion into a SIEM
+Revise backup and retention policies
+Establish CPU and Memory thresholds in testing
+
+Maximize network utilization within the same cloud and region
+
+Process when the carbon intensity is low
+Use SPOT VMs where possible
+
+Utilize auto-scaling and bursting capabilities
+
+Match the scalability needs
+Evaluate Ampere Altra Arm-based processors for Virtual Machines
+Delete zombie workloads
 
 
 
@@ -195,6 +179,12 @@ Optimize for async access patterns
 
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
+
+Choose A Region That Is Closest To Users
+
+Delete Unused Storage Resources
+
+
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
    
