@@ -74,44 +74,24 @@ As your workload End2End architecture would typically include several Azure serv
 
 
 Design:
-Evaluate moving monoliths to a microservice architecture
-
-Leverage cloud native design patterns
-
-Consider using circuit breaker patterns
-
-Optimize code for efficient resource usage
-
-Optimize for async access patterns
-Assess where parallelization is possible
-Containerize workloads where applicable
 
 
-Deploy to the Right Region:
-Select Azure regions based on where the customer resides
-Deploy to low-carbon regions
+
 
 reporting : tag resources
 
 Optimize storage:
 
-Optimize Storage Utilization
-Use the best suited storage access tier
-Only store what is relevant
-Set Storage Retention Policies
-Revise backup and retention policies
+
 
 
 
 Optimize network:
-Evaluate whether to use TLS termination
-Optimize the collection of logs
-Reduce Transmitted Data
+
 
 
 Testing
-Assess with chaos engineering
-Establish CPU and Memory thresholds in testing
+
 
 Reduce waste:
 Turn off workloads outside of business hours
@@ -142,27 +122,64 @@ Match the scalability needs
 Evaluate Ampere Altra Arm-based processors for Virtual Machines
 Delete zombie workloads
 
+**Optimize code for efficient resource usage**
 
-
-**Modernize Applications to allow independent scaling of their logical components**
+Containerize workloads where applicable
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
-- Build serverless Applications using [Keda](https://keda.sh/) 
+
+**Evaluate moving monoliths to a microservice architecture to allow independent scaling of their logical components**
 - Build Microservices Applications using [Dapr](https://dapr.io/) 
 - Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
-**Optimize storage persistence**
+Design for Event Driven scaling, which allows to scale based on business metrics
+- Build serverless Applications using [Keda](https://keda.sh/) 
+ 
+Leverage cloud native design patterns
+
+Consider using circuit breaker patterns
+
+Optimize for async access patterns
+
+
+Deploy to the Right Region:
+Select Azure regions based on where the customer resides
+Deploy to low-carbon regions
+
+** Aim for [Stateless Design]**
 - (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
+
+choose-the-appropriate-storage-type
 - Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
+
+
+Optimize Storage Utilization
 - Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
 - [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
-- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
+
+Set Storage Retention Policies
 - Define retention policies for storage, backups, logs
 
+Revise backup and retention policies
+- Define retention policies for storage, backups, logs
+- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
+
+
+
+
+
 **Optimize networking**
+
+Evaluate whether to use TLS termination
 - Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 - Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+
+Optimize the collection of logs
+
+Reduce Transmitted Data
 - Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
 - Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
+
+
 
  **Assess for Resilience and Performance**
 - Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
