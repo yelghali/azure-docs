@@ -71,6 +71,95 @@ The following checklist provides recommendations for designing sustainable workl
 
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
+
+
+Choose A Region That Is Closest To Users
+
+Delete Unused Storage Resources
+
+Match Utilization Requirements of Virtual Machines (VMs)
+
+Optimize Storage Utilization
+
+Reduce Transmitted Data
+
+Set Storage Retention Policies
+
+Use network security tools with auto-scaling capabilities
+
+Evaluate whether to use TLS termination
+
+Use DDoS protection
+
+Integrate Microsoft Defender for Endpoint
+
+Tag security resources
+
+Use cloud native network security controls to eliminate unnecessary network traffic
+
+Archive log data to long-term storage
+
+
+Filter or exclude log sources before transmission or ingestion into a SIEM
+
+Avoid transferring large unfiltered data sets from one cloud service provider to another
+
+Use cloud native log collection methods where applicable
+
+Use the best suited storage access tier
+
+Only store what is relevant
+
+Revise backup and retention policies
+
+Optimize the collection of logs
+
+Select Azure regions based on where the customer resides
+
+Maximize network utilization within the same cloud and region
+
+Assess where parallelization is possible
+
+Assess with chaos engineering
+
+Establish CPU and Memory thresholds in testing
+
+Deploy to low-carbon regions
+
+Process when the carbon intensity is low
+
+Containerize workloads where applicable
+
+Use SPOT VMs where possible
+
+Turn off workloads outside of business hours
+
+Utilize auto-scaling and bursting capabilities
+
+Match the scalability needs
+Evaluate Ampere Altra Arm-based processors for Virtual Machines
+
+Delete zombie workloads
+
+Evaluate moving monoliths to a microservice architecture
+
+Leverage cloud native design patterns
+
+Consider using circuit breaker patterns
+
+Optimize code for efficient resource usage
+
+Optimize for async access patterns
+
+
+
+
+
+
+
+
+
+
 **Modernize Applications to allow independent scaling of their logical components**
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 - Build serverless Applications using [Keda](https://keda.sh/) 
