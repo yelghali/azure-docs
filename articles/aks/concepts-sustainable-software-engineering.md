@@ -190,18 +190,8 @@ Use DDoS protection
 
 
 
-
-
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
    
-**Enable Modernization of Applications**
-
-:heavy_check_mark: Use Keda as an [AKS addon](/azure/aks/keda-about)
-
-:heavy_check_mark: Use Darp as an [AKS addon](/azure/aks/dapr)
-
- :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
-
 **Enable Cluster and node auto-updates**
 Archive log data to long-term storage
 
@@ -209,6 +199,15 @@ Archive log data to long-term storage
 
  :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
  
+
+**Use suppored addons**
+
+:heavy_check_mark: Use Keda as an [AKS addon](/azure/aks/keda-about)
+
+:heavy_check_mark: Use Darp as an [AKS addon](/azure/aks/dapr)
+
+ :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
+
  
 **Utilize Node auto-scaling and bursting capabilities** _to match the scalability needs of workloads_
 
@@ -220,11 +219,6 @@ Archive log data to long-term storage
 
 :heavy_check_mark: Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
 
- **Use Energy Efficient Hardware**
-
-Evaluate Ampere Altra Arm-based processors for Virtual Machines
-
- :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 **Maximize Hardware utilization**
 
@@ -237,6 +231,13 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 :heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 
 
+ **Use Energy Efficient Hardware**
+
+Evaluate Ampere Altra Arm-based processors for Virtual Machines
+
+ :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
+
+
 **Use SPOT VMs where possible**
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
@@ -246,7 +247,6 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
-**Secure endpoints and filter communication access ** _to eliminate unnecessary network traffic__
 **Use cloud native network security controls to eliminate unnecessary network traffic**
 
 :heavy_check_mark: [Network security groups](/azure/virtual-network/network-security-groups-overview) 
