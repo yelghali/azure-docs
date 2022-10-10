@@ -128,23 +128,25 @@ Select Azure regions based on where the customer resides
 Deploy to low-carbon regions
 
 ** Aim for [Stateless Design]**
+
 :heavy_check_mark: (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
 
-choose-the-appropriate-storage-type
+**choose-the-appropriate-storage-type**
+
 :heavy_check_mark: Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
 
 
-Optimize Storage Utilization
+**Optimize Storage Utilization**
 
 :heavy_check_mark: Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
 
 :heavy_check_mark: [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 
-Set Storage Retention Policies
+**Set Storage Retention Policies**
 
 :heavy_check_mark: Define retention policies for storage, backups, logs
 
-Revise backup and retention policies
+**Revise backup and retention policies**
 
 :heavy_check_mark: Define retention policies for storage, backups, logs
 
@@ -152,9 +154,7 @@ Revise backup and retention policies
 
 
 
-**Optimize networking**
-
-Evaluate whether to use TLS termination
+**Evaluate whether to use TLS termination**
 
 :heavy_check_mark: Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
 
@@ -162,13 +162,13 @@ Evaluate whether to use TLS termination
 
 
 
-Reduce Transmitted Data
+**Reduce Transmitted Data**
 
 :heavy_check_mark: Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
 
 :heavy_check_mark: Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
-Optimize the collection of logs
+**Optimize the collection of logs**
 
 
  **Assess for Resilience and Performance**
@@ -252,11 +252,11 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 
-Use SPOT VMs where possible
+**Use SPOT VMs where possible**
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
-ezdfzefze
+**ezdfzefze**
 :heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
 
@@ -271,26 +271,26 @@ Maximize network utilization within the same cloud and region
 :heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
 **Secure endpoints and eliminate unnecessary network traffic**
-Use cloud native network security controls to eliminate unnecessary network traffic
+**Use cloud native network security controls to eliminate unnecessary network traffic**
 
 :heavy_check_mark: [Network security groups](/azure/virtual-network/network-security-groups-overview) 
 
 :heavy_check_mark: Use [Network Policies](/azure/aks/use-network-policies)
 
-Use network security tools with auto-scaling capabilities
+**Use network security tools with auto-scaling capabilities**
 
 :heavy_check_mark: Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
 
 :heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
-Integrate Microsoft Defender for Endpoint
+**Integrate Microsoft Defender for Endpoint**
 
 :heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 
 :heavy_check_mark: [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
 **Reduce Waste**
-Delete zombie workloads
+**Delete zombie workloads**
 Revise backup and retention policies
 Delete Unused Storage Resources
 
