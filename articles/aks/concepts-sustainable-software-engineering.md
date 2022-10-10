@@ -71,15 +71,21 @@ The following checklist provides recommendations for designing sustainable workl
 
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
+**Tag resources** _to enable recording of emissions impact_
+
+:heavy_check_mark: [Use Tags](/azure/aks/use-tags).
 
 
+**Optimize code for efficient resource usage** _to optimize workload at the software level_
 
-**Optimize code for efficient resource usage**
+ :heavy_check_mark: Reduce CPU cycles and the number of resources you need for your application.
+ 
+ :heavy_check_mark: Profile and monitor software performance.
+
 
 **Containerize workloads where applicable** _to reduce unnecessary resource allocation and to utilize the deployed resources better._
 
  :heavy_check_mark:  Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
-
 
 
 **Evaluate moving monoliths to a microservice architecture** _to allow independent scaling of their logical components_
@@ -89,8 +95,7 @@ As your workload End2End architecture would typically include several Azure serv
 :heavy_check_mark: Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
 
-
-**Design for Event Driven scaling**_, to scale workloads based on relevent business metrics(HTTP requests, queue length, Cloud Event, etc.)_
+**Design for Event Driven scaling** _to scale workloads based on relevent business metrics(HTTP requests, queue length, Cloud Event, etc.)_
 
 :heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/)
 
@@ -99,7 +104,7 @@ Deploy to the Right Region:
 Select Azure regions based on where the customer resides
 Deploy to low-carbon regions
 
-**Aim for Stateless Design**, _ to reduce the in-memory or on-disk data required by the workload to function_
+**Aim for Stateless Design** _to reduce the in-memory or on-disk data required by the workload to function_
 
 :heavy_check_mark: (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
 
@@ -145,32 +150,35 @@ Deploy to low-carbon regions
 
 :heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
 
- **Assess for Resilience and Performance** _to increase service resilience and the ability to react to failures, allowing for a more optimized fault handling._
+ **Assess for Resilience and Performance** _to increase ability to react to failures, allowing for a more optimized fault handling._
 
 :heavy_check_mark: Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering)
 
-**Maximize Node resource utilization**
-
-:heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
+**Maximize Node resource utilization** _to maximize its underying hardware utilization_
 
 :heavy_check_mark: Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
 
-:heavy_check_mark: [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
-
 :heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
-:heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+:heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 
-:heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
 **Consider Carbon Awareness in your workload design**
 
  :heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
  :heavy_check_mark: Consider deploying to data centers close to the consumer
 
-**Reduce waste**:
+**Turn off workloads outside of business hours** _to reduce waste_
 
-:heavy_check_mark: Turn off workloads outside of business hours
+:heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
+
+**Monitor & Optimize**
+
+:heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+
+:heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+
+
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
@@ -228,7 +236,6 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 
-:heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 
 **Use SPOT VMs where possible**
 
