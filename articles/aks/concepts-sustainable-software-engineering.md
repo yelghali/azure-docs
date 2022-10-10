@@ -144,13 +144,15 @@ Deploy to low-carbon regions
 
 :heavy_check_mark: Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering)
 
-**Optimize resource usage**
+**Maximize node utilization**
 
 :heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
 
 :heavy_check_mark: Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
 
 :heavy_check_mark: [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
+
+:heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
 :heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 
@@ -187,10 +189,15 @@ The following checklist provides recommendations for designing energy and hardwa
 
  :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
-**Scale cluster resources, based on demand**
+**Optimize operations**
+Archive log data to long-term storage
 
-Utilize auto-scaling and bursting capabilities
-Match the scalability needs
+ :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
+
+ :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
+ 
+ 
+**Utilize Node auto-scaling and bursting capabilities** _to match the scalability needs of workloads_
 
 :heavy_check_mark: Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
 
@@ -210,9 +217,6 @@ Evaluate Ampere Altra Arm-based processors for Virtual Machines
 
 :heavy_check_mark: Separate applications into different node pools allowing independent sizing & scalling.
 
-Establish CPU and Memory thresholds in testing
-Match Utilization Requirements of Virtual Machines (VMs)
-
 :heavy_check_mark: Align node SKU selection and managed disk size with applications requirements.
 :
 heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
@@ -225,21 +229,12 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
-**ezdfzefze**
-:heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
-
-
-
-**Reduce Network Latency**
-
-Reduce Transmitted Data
-Maximize network utilization within the same cloud and region
-
+**Reduce Network travel**
 
 :heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
-**Secure endpoints and eliminate unnecessary network traffic**
+**Secure endpoints and filter communication access ** _to eliminate unnecessary network traffic__
 **Use cloud native network security controls to eliminate unnecessary network traffic**
 
 :heavy_check_mark: [Network security groups](/azure/virtual-network/network-security-groups-overview) 
@@ -252,29 +247,23 @@ Maximize network utilization within the same cloud and region
 
 :heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
-**Integrate Microsoft Defender for Endpoint**
+**Scan for vulnerabilities**
 
 :heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 
 :heavy_check_mark: [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
-**Reduce Waste**
+
 **Delete zombie workloads**
-Revise backup and retention policies
-Delete Unused Storage Resources
 
 :heavy_check_mark: Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
 
+**turnoff nodepools outside regular business hours.**
 :heavy_check_mark: Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
 
 :heavy_check_mark: Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 
-**Optimize operations**
-Archive log data to long-term storage
-
- :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
-
- :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
+**Monitor & Optimize**
 
 :heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 
