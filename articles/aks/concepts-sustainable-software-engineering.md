@@ -176,31 +176,12 @@ Turn off workloads outside of business hours
 
 Choose A Region That Is Closest To Users
 
-Delete Unused Storage Resources
-
-
 Filter or exclude log sources before transmission or ingestion into a SIEM
-Match Utilization Requirements of Virtual Machines (VMs)
-Reduce Transmitted Data
-Use network security tools with auto-scaling capabilities
 Use DDoS protection
-Integrate Microsoft Defender for Endpoint
-Use cloud native network security controls to eliminate unnecessary network traffic
-Archive log data to long-term storage
-Filter or exclude log sources before transmission or ingestion into a SIEM
-Revise backup and retention policies
-Establish CPU and Memory thresholds in testing
 
-Maximize network utilization within the same cloud and region
 
-Process when the carbon intensity is low
-Use SPOT VMs where possible
 
-Utilize auto-scaling and bursting capabilities
 
-Match the scalability needs
-Evaluate Ampere Altra Arm-based processors for Virtual Machines
-Delete zombie workloads
 
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
@@ -211,40 +192,72 @@ The following checklist provides recommendations for designing energy and hardwa
  - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
 **Scale cluster resources, based on demand**
+Utilize auto-scaling and bursting capabilities
+Match the scalability needs
+
 - Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
 - Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
 - Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
 - Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
 
  **Use Energy Efficient Hardware**
+ Evaluate Ampere Altra Arm-based processors for Virtual Machines
+
  - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 **Maximize Hardware utilization**
 - Separate applications into different node pools allowing independent sizing & scalling.
+
+Establish CPU and Memory thresholds in testing
+Match Utilization Requirements of Virtual Machines (VMs)
+
 - Align node SKU selection and managed disk size with applications requirements.
 - [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
 - [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 - Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
+
+Use SPOT VMs where possible
 - Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 - Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
+
+
+
 **Reduce Network Latency**
+Reduce Transmitted Data
+Maximize network utilization within the same cloud and region
+
+
 - Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
 **Secure endpoints and eliminate unnecessary network traffic**
+Use cloud native network security controls to eliminate unnecessary network traffic
+
 - Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
 - Use [Network Policies](/azure/aks/use-network-policies)
+
+Use network security tools with auto-scaling capabilities
+
 - Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
 - Filter [egress traffic](/azure/aks/limit-egress-traffic)
+
+Integrate Microsoft Defender for Endpoint
+
 - [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 - [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
 **Reduce Waste**
+Delete zombie workloads
+Revise backup and retention policies
+Delete Unused Storage Resources
+
 - Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
 - Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
 - Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 
 **Optimize operations**
+Archive log data to long-term storage
+
  - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
  - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
 - Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
@@ -254,6 +267,8 @@ The following checklist provides recommendations for designing energy and hardwa
  - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
  - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
+Process when the carbon intensity is low
+Filter or exclude log sources before transmission or ingestion into a SIEM
 
 ## Next step
 
