@@ -73,35 +73,10 @@ As your workload End2End architecture would typically include several Azure serv
 
 
 
-Design:
-
-
-
-
-reporting : tag resources
-
-Optimize storage:
-
-
-
-
-
-Optimize network:
-
-
-
-Testing
-
-
-
-
-
 
 **Optimize code for efficient resource usage**
 
-**Containerize workloads where applicable**
-
-_Consider options for containerizing workloads to reduce unnecessary resource allocation and to utilize the deployed resources better._
+**Containerize workloads where applicable** _to reduce unnecessary resource allocation and to utilize the deployed resources better._
 
  :heavy_check_mark:  Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
@@ -113,10 +88,12 @@ _Monolithic applications usually scale as a unit, leaving little room to scale o
 
 :heavy_check_mark: Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
-**Design for Event Driven scaling, which allows to scale based on business metrics**
+**Design for Event Driven scaling**
+_, which allows to scale based on business metrics_
+
 :heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/) 
  
-Leverage cloud native design patterns
+**Leverage cloud native design patterns**
 
 Consider using circuit breaker patterns
 
