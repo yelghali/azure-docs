@@ -83,9 +83,6 @@ As your workload End2End architecture would typically include several Azure serv
 
  :heavy_check_mark:  Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
-**Tag resources** _to enable recording of emissions impact_
-
-:heavy_check_mark: [Use Tags](/azure/aks/use-tags).
 
 **Evaluate moving monoliths to a microservice architecture** _to allow independent scaling of their logical components_
 
@@ -157,25 +154,29 @@ Deploy to low-carbon regions
 
 :heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
 
+**Turn off workloads outside of business hours** _to reduce waste_
+
+:heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
+
+**Tag resources** _to enable recording of emissions impact_
+
+:heavy_check_mark: [Use Tags](/azure/aks/use-tags).
+
  **Assess for Resilience and Performance** _to increase ability to react to failures, allowing for a more optimized fault handling._
 
 :heavy_check_mark: Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering)
 
-
-**Consider Carbon Awareness in your workload design**
-
- :heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
- :heavy_check_mark: Consider deploying to data centers close to the consumer
-
-**Turn off workloads outside of business hours** _to reduce waste_
-
-:heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
 
 **Monitor & Optimize**
 
 :heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
 
 :heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+
+**Consider Carbon Awareness in your workload design**
+
+ :heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
+ :heavy_check_mark: Consider deploying to data centers close to the consumer
 
 
 
