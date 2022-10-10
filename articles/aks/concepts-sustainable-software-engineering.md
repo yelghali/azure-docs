@@ -113,8 +113,8 @@ _Monolithic applications usually scale as a unit, leaving little room to scale o
 
 :heavy_check_mark: Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
-Design for Event Driven scaling, which allows to scale based on business metrics
-- Build serverless Applications using [Keda](https://keda.sh/) 
+**Design for Event Driven scaling, which allows to scale based on business metrics**
+:heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/) 
  
 Leverage cloud native design patterns
 
