@@ -86,8 +86,7 @@ As your workload End2End architecture would typically include several Azure serv
 
 :heavy_check_mark: Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
-**Design for Event Driven scaling**
-_, which allows to scale based on business metrics_
+**Design for Event Driven scaling**_, to scale workloads based on relevent business metrics(HTTP requests, queue length, Cloud Event, etc.)_
 
 :heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/) 
  
