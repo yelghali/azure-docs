@@ -80,9 +80,7 @@ As your workload End2End architecture would typically include several Azure serv
 
  :heavy_check_mark:  Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
-**Evaluate moving monoliths to a microservice architecture to allow independent scaling of their logical components**
-
-_Monolithic applications usually scale as a unit, leaving little room to scale only the individual components that may need it._
+**Evaluate moving monoliths to a microservice architecture** _to allow independent scaling of their logical components_
 
 :heavy_check_mark: Build Microservices Applications using [Dapr](https://dapr.io/) 
 
