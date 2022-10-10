@@ -72,7 +72,7 @@ The following checklist provides recommendations for designing sustainable workl
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
 
-**Optimize code for efficient resource usage** _to optimize workload at the software level_
+**Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
  :heavy_check_mark: Reduce CPU cycles and the number of resources you need for your application.
  
@@ -154,7 +154,7 @@ Deploy to low-carbon regions
 
 :heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
 
-**Turn off workloads outside of business hours** _to reduce waste_
+**Turn off workloads outside of business hours** _to reduce energy waste and optimize costs_
 
 :heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
 
@@ -231,14 +231,14 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 :heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 
 
- **Use Energy Efficient Hardware**
+ **Use Energy Efficient Hardware** _cost-effective and power-efficient _
 
 Evaluate Ampere Altra Arm-based processors for Virtual Machines
 
  :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 
-**Use SPOT VMs where possible**
+**Use SPOT VMs where possible** _otherwise wasted capacity—at significantly reduced prices_
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
@@ -259,9 +259,11 @@ Evaluate Ampere Altra Arm-based processors for Virtual Machines
 
 :heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
-**Scan for vulnerabilities**
+**Integrate Endpoint Security**
 
 :heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+
+**Scan for vulnerabilities**
 
 :heavy_check_mark: [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
@@ -270,7 +272,7 @@ Evaluate Ampere Altra Arm-based processors for Virtual Machines
 
 :heavy_check_mark: Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
 
-**turnoff nodepools outside regular business hours.**
+**turnoff nodepools outside regular business hours** _to reduce energy waste and optimize cost_
 :heavy_check_mark: Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
 
 :heavy_check_mark: Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
