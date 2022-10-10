@@ -94,12 +94,12 @@ Testing
 
 
 
------
+
 
 
 #### **Optimize code for efficient resource usage**
 
-Containerize workloads where applicable
+#### Containerize workloads where applicable
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
 **Evaluate moving monoliths to a microservice architecture to allow independent scaling of their logical components**
