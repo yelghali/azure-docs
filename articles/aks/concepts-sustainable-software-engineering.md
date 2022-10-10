@@ -92,13 +92,7 @@ As your workload End2End architecture would typically include several Azure serv
 
 **Design for Event Driven scaling**_, to scale workloads based on relevent business metrics(HTTP requests, queue length, Cloud Event, etc.)_
 
-:heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/) 
- 
-**Leverage cloud native design patterns**
-
-Consider using circuit breaker patterns
-
-Optimize for async access patterns
+:heavy_check_mark:Build serverless Applications using [Keda](https://keda.sh/)
 
 
 Deploy to the Right Region:
@@ -120,7 +114,7 @@ Deploy to low-carbon regions
 
 :heavy_check_mark: [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 
-**Set Storage Retention Policies**
+**Set Storage Retention Policies**, _to avoid storing unnecessary data_
 
 :heavy_check_mark: Define retention policies for storage, backups, logs
 
