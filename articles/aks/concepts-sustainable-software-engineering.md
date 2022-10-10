@@ -100,11 +100,13 @@ Testing
 **Optimize code for efficient resource usage**
 
 **Containerize workloads where applicable**
+
 _Consider options for containerizing workloads to reduce unnecessary resource allocation and to utilize the deployed resources better._
 
  - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
 **Evaluate moving monoliths to a microservice architecture to allow independent scaling of their logical components**
+
 _Monolithic applications usually scale as a unit, leaving little room to scale only the individual components that may need it._
 - Build Microservices Applications using [Dapr](https://dapr.io/) 
 - Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
