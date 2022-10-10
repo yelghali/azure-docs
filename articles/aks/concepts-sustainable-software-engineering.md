@@ -103,13 +103,15 @@ Testing
 
 _Consider options for containerizing workloads to reduce unnecessary resource allocation and to utilize the deployed resources better._
 
- - Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
+ :heavy_check_mark:  Use [Draft](/azure/aks/draft) to simplify containzerizing an application by generating its Dockerfiles and Kubernetes manifests.
 
 **Evaluate moving monoliths to a microservice architecture to allow independent scaling of their logical components**
 
 _Monolithic applications usually scale as a unit, leaving little room to scale only the individual components that may need it._
-- Build Microservices Applications using [Dapr](https://dapr.io/) 
-- Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
+
+:heavy_check_mark: Build Microservices Applications using [Dapr](https://dapr.io/) 
+
+:heavy_check_mark: Build [CNCF Projects on AKS](/azure/architecture/example-scenario/apps/build-cncf-incubated-graduated-projects-aks)
 
 Design for Event Driven scaling, which allows to scale based on business metrics
 - Build serverless Applications using [Keda](https://keda.sh/) 
@@ -126,56 +128,73 @@ Select Azure regions based on where the customer resides
 Deploy to low-carbon regions
 
 ** Aim for [Stateless Design]**
-- (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
+:heavy_check_mark: (if possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
 
 choose-the-appropriate-storage-type
-- Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
+:heavy_check_mark: Choose [the appropriate storage type](/azure/aks/operator-best-practices-storage#choose-the-appropriate-storage-type).
 
 
 Optimize Storage Utilization
-- Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
-- [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
+
+:heavy_check_mark: Use [Storage Classes to define application needs](/azure/aks/operator-best-practices-storage#create-and-use-storage-classes-to-define-application-needs)
+
+:heavy_check_mark: [Dynamically provision volumes](/azure/aks/operator-best-practices-storage#dynamically-provision-volumes).
 
 Set Storage Retention Policies
-- Define retention policies for storage, backups, logs
+
+:heavy_check_mark: Define retention policies for storage, backups, logs
 
 Revise backup and retention policies
-- Define retention policies for storage, backups, logs
-- Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
+
+:heavy_check_mark: Define retention policies for storage, backups, logs
+
+:heavy_check_mark: Backup & restore [your persistent volumes](/azure/aks/operator-best-practices-storage#secure-and-back-up-your-data) 
 
 
 
 **Optimize networking**
 
 Evaluate whether to use TLS termination
-- Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
-- Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
+
+:heavy_check_mark: Consider if you can terminate TLS at your border gateway and continue with non-TLS to your workload load balancer and onwards to your workload.
+
+:heavy_check_mark: Review the information on [TLS termination](/azure/application-gateway/ssl-overview#tls-termination) to better understand the performance and utilization impact it offers.
 
 
 
 Reduce Transmitted Data
-- Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
-- Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
+
+:heavy_check_mark: Consider if you (really) need a [service mesh](/azure/aks/servicemesh-about)
+
+:heavy_check_mark: Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
 Optimize the collection of logs
 
 
  **Assess for Resilience and Performance**
-- Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
+
+:heavy_check_mark: Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering) to assess how the workload handles platform outages and traffic spikes or dips. This helps increase service resilience and the ability to react to failures, allowing for a more optimized fault handling.
 
 **Optimize resource usage**
-- Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
- - Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
-- [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
-- Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
-- Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+
+:heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
+
+:heavy_check_mark: Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
+
+:heavy_check_mark: [Use Tags](/azure/aks/use-tags) to enable recording of emissions impact.
+
+:heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+
+:heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
 **Consider Carbon Awareness in your workload design**
- - Deploy your workloads to Regions powered by renewable and low-carbon energy sources
- - Consider deploying to data centers close to the consumer
 
-Reduce waste:
-Turn off workloads outside of business hours
+ :heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
+ :heavy_check_mark: Consider deploying to data centers close to the consumer
+
+**Reduce waste**:
+
+:heavy_check_mark: Turn off workloads outside of business hours
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
@@ -192,85 +211,111 @@ Use DDoS protection
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
    
 **Enable Modernization of Applications**
--  Use Keda as an [AKS addon](/azure/aks/keda-about)
--  Use Darp as an [AKS addon](/azure/aks/dapr)
- - Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
+
+:heavy_check_mark: Use Keda as an [AKS addon](/azure/aks/keda-about)
+
+:heavy_check_mark: Use Darp as an [AKS addon](/azure/aks/dapr)
+
+ :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
 **Scale cluster resources, based on demand**
+
 Utilize auto-scaling and bursting capabilities
 Match the scalability needs
 
-- Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
-- Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
-- Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
-- Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
+:heavy_check_mark: Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
+
+:heavy_check_mark: Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
+
+:heavy_check_mark: Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
+
+:heavy_check_mark: Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
 
  **Use Energy Efficient Hardware**
- Evaluate Ampere Altra Arm-based processors for Virtual Machines
 
- - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
+Evaluate Ampere Altra Arm-based processors for Virtual Machines
+
+ :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 **Maximize Hardware utilization**
-- Separate applications into different node pools allowing independent sizing & scalling.
+
+:heavy_check_mark: Separate applications into different node pools allowing independent sizing & scalling.
 
 Establish CPU and Memory thresholds in testing
 Match Utilization Requirements of Virtual Machines (VMs)
 
-- Align node SKU selection and managed disk size with applications requirements.
-- [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
-- [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
-- Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
+:heavy_check_mark: Align node SKU selection and managed disk size with applications requirements.
+:
+heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-practices-storage#size-the-nodes-for-storage-needs)
+
+:heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
+
+:heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 
 Use SPOT VMs where possible
-- Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
-- Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
+
+:heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
+
+ezdfzefze
+:heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
 
 
 
 **Reduce Network Latency**
+
 Reduce Transmitted Data
 Maximize network utilization within the same cloud and region
 
 
-- Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
+:heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
 **Secure endpoints and eliminate unnecessary network traffic**
 Use cloud native network security controls to eliminate unnecessary network traffic
 
-- Use [Network security groups](/azure/virtual-network/network-security-groups-overview) 
-- Use [Network Policies](/azure/aks/use-network-policies)
+:heavy_check_mark: [Network security groups](/azure/virtual-network/network-security-groups-overview) 
+
+:heavy_check_mark: Use [Network Policies](/azure/aks/use-network-policies)
 
 Use network security tools with auto-scaling capabilities
 
-- Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
-- Filter [egress traffic](/azure/aks/limit-egress-traffic)
+:heavy_check_mark: Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
+
+:heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
 Integrate Microsoft Defender for Endpoint
 
-- [Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
-- [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
+:heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+
+:heavy_check_mark: [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
 **Reduce Waste**
 Delete zombie workloads
 Revise backup and retention policies
 Delete Unused Storage Resources
 
-- Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
-- Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
-- Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
+:heavy_check_mark: Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
+
+:heavy_check_mark: Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
+
+:heavy_check_mark: Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
 
 **Optimize operations**
 Archive log data to long-term storage
 
- - Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
- - Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
-- Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
-- Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
+ :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
+
+ :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
+
+:heavy_check_mark: Use [Best Practices for Monitoring Cloud Applications](/azure/architecture/framework/devops/monitor-collection-data-storage)
+
+:heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
 **Consider Carbon Awareness in your workload orchestration**
- - Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
- - Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
+
+:heavy_check_mark: Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
+
+:heavy_check_mark: Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
 Process when the carbon intensity is low
 Filter or exclude log sources before transmission or ingestion into a SIEM
