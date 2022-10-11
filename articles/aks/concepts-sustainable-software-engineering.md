@@ -106,7 +106,7 @@ The following checklist provides recommendations for designing sustainable workl
 
 **Aim for Stateless Design** _to reduce the in-memory or on-disk data required by the workload to function_
 
-:heavy_check_mark: (If possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
+:heavy_check_mark: (When possible), Aim for [Stateless Design](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers)
 
 **Choose The Appropriate Storage type** _to adjust to workkalods performance needs and access patterns_
 
