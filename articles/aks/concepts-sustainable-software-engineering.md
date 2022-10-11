@@ -49,6 +49,8 @@ We recommend that readers familiarize themselves with these design areas, review
 
  -  In practice, you should consider the hollistic lifecycle of your application, as Business requiements shape Workload design, which will inform cluster design
  
+ - The following tables maps sustainability design areas with design considerations for AKS workloads and clusters.
+  
 |Design area|Scope for AKS|
 |---|---|
 |Application design|**workloads**: Modernize workloads to allow independent optimization of their logical components|
@@ -56,11 +58,9 @@ We recommend that readers familiarize themselves with these design areas, review
 |Testing|**cluster and workloads**: Optimize Testing procedures for Cluster & workload development lifecycle|
 |_Operational procedures_|Implement sustainability operations (not a technical consideration) |
 |Storage|**cluster and workloads**: Consider _Stateless Vs Stateful Application_ Design ; Plan for storage classes & Backup retention policies.|
-|Network and connectivity|**cluster and workloads**: Optimize network travel for workloads and clusters|
-|Security| **cluster and workloads**: Implement Security and Optimize log collection for Monitoring & SIEM.|
+|Network and connectivity|**cluster and workloads**: Optimize network traffic for workloads and clusters|
+|Security| **cluster and workloads**: Implement Security controls and Optimize log collection for Monitoring & SIEM.|
 
-
- your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
 ## Cloud efficiency
 Making workloads more [sustainable and cloud efficient](/azure/architecture/framework/sustainability/sustainability-get-started#cloud-efficiency-overview), requires combining efforts around cost optimization, reducing carbon emissions, and optimizing energy consumption. Optimizing the application's cost is the initial step in making workloads more sustainable.
