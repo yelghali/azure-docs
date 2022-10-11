@@ -25,6 +25,9 @@ This article provides practical guidance for applying WAF sustainability guidanc
 * [Design Methodology for building sustainable workloads](/azure/architecture/framework/sustainability/sustainability-design-methodology)
 * [Design principles of a sustainable workload](/azure/architecture/framework/sustainability/sustainability-design-principles)
 
+## Cloud efficiency
+Making workloads more [sustainable and cloud efficient](/azure/architecture/framework/sustainability/sustainability-get-started#cloud-efficiency-overview), requires combining efforts around cost optimization, reducing carbon emissions, and optimizing energy consumption. Optimizing the application's cost is the initial step in making workloads more sustainable.
+
 
 ## Key sustainability Design Areas
 
@@ -59,9 +62,6 @@ We recommend that readers familiarize themselves with these design areas, review
 |[Network and connectivity](concepts-sustainability-networking.md)|Optimize network travel for workloads and clusters|
 |[Security](concepts-sustainability-security.md)| Implement Security and Optimize log collection for Monitoring & SIEM.|
 
-
-## Cloud efficiency
-Making workloads more [sustainable and cloud efficient](/azure/architecture/framework/sustainability/sustainability-get-started#cloud-efficiency-overview), requires combining efforts around cost optimization, reducing carbon emissions, and optimizing energy consumption. Optimizing the application's cost is the initial step in making workloads more sustainable.
 
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
