@@ -49,7 +49,7 @@ We recommend that readers familiarize themselves with these design areas, review
 
  -  In practice, you should consider the hollistic lifecycle of your application, as Business requiements shape Workload design, which will inform cluster design
  
- - The following tables maps sustainability design areas with design considerations for AKS workloads and clusters.
+ - The following tables maps sustainability design areas, with sustainability design considerations for AKS workloads and clusters.
   
 |Design area|Scope for AKS|
 |---|---|
