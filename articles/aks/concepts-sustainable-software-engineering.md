@@ -190,7 +190,7 @@ The following checklist provides recommendations for designing energy and hardwa
 
  :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
 
- :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
+ :heavy_check_mark: Configure [Automatic **Security updates**](/aks/node-upgrade-github-actions)
  
 
 **Use suppored addons** _to benefit from trusted updates and regular security patches_
@@ -253,7 +253,7 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 **Integrate Endpoint Security** _to identify and remediate attacks, which could impact unnecessary resource misusage_
 
-:heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
+:heavy_check_mark: Enable [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 
 **Scan for vulnerabilities** _to avoid unnecessary resource misusage_
 
