@@ -247,8 +247,6 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Use [Network Policies](/azure/aks/use-network-policies)
 
-**Use network security tools with auto-scaling capabilities** _to match demand and reduce costs and energy consumtion_
-
 :heavy_check_mark: Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
 
 :heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
