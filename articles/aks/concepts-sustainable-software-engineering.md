@@ -202,7 +202,7 @@ The following checklist provides recommendations for designing energy and hardwa
 :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
 
-**Maximize Node resource utilization**
+**Maximize Node resource utilization** _to maximize its underying hardware utilization_
 
 :heavy_check_mark: Separate applications into different node pools allowing independent sizing & scalling.
 
