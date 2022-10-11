@@ -71,7 +71,7 @@ Making workloads more [sustainable and cloud efficient](/azure/architecture/fram
 The following checklist provides recommendations for designing sustainable workloads, hosted on AKS. 
 
 > [!IMPORTANT]
-> As your workload End2End architecture would typically include several Azure services (or 3rd party integration), your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads-and-clusters), for a more comprehensive approach.
+> As your workload End2End architecture would typically include several Azure services (or 3rd party integration), your workload design considerations should refer to [Sustainability Design areas](#key-sustainability-design-areas), for a more comprehensive approach.
 
 **Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
