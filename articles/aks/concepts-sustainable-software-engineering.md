@@ -294,8 +294,7 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Plan your deployments to maximize compute utilization for running batch workloads during low-carbon intensity periods.
 
-Process when the carbon intensity is low
-Filter or exclude log sources before transmission or ingestion into a SIEM
+
 
 ## Next step
 
