@@ -203,17 +203,6 @@ The following checklist provides recommendations for designing energy and hardwa
 
 :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
- 
-**Utilize Node auto-scaling and bursting capabilities** _to match the scalability needs of workloads_
-
-:heavy_check_mark: Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
-
-:heavy_check_mark: Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
-
-:heavy_check_mark: Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
-
-:heavy_check_mark: Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
-
 
 **Maximize Hardware utilization**
 
@@ -226,6 +215,17 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 :heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 
 :heavy_check_mark: Enforce Kubernetes [Resource Quotas at the namespace level](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
+
+ 
+**Utilize Node auto-scaling and bursting capabilities** _to match the scalability needs of workloads_
+
+:heavy_check_mark: Use [Cluster Auto-scaler](azure/aks/cluster-autoscaler) to scale your cluster based on Demand.
+
+:heavy_check_mark: Leverage [Scaling **User node pools** to 0](/azure/aks/scale-cluster#scale-user-node-pools-to-0)
+
+:heavy_check_mark: Use [Virtual Nodes](/azure/aks/virtual-nodes) to rapidly burst to Serverless Nodes (that scale to zero when there is no demand)
+
+:heavy_check_mark: Review the [B-series burstable virtual machine sizes](https://azure.microsoft.com/en-in/blog/introducing-burstable-vm-support-in-aks/).
 
 
  **Use Energy Efficient Hardware** _to leverage cost-effective and power-efficient compute_
