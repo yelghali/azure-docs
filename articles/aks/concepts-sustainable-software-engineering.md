@@ -142,16 +142,6 @@ As your workload End2End architecture would typically include several Azure serv
 :heavy_check_mark: Consider [when to use Dapr with Or without a service mesh](https://docs.dapr.io/concepts/service-mesh/#when-to-use-dapr-or-a-service-mesh-or-both)
 
 
-**Optimize the collection of logs** _to reduce stored and transmitted logs_
- 
-:heavy_check_mark: Make sure you are logging and retaining only data that is relevant to your needs.
-
-:heavy_check_mark: [configure data collection rules for AKS Container Insights](/azure/azure-monitor/containers/container-insights-agent-config#data-collection-settings)
-
-:heavy_check_mark: Read more about the [Cost optimization and Log Analytics](/azure/architecture/framework/services/monitoring/log-analytics/cost-optimization).
-
-:heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
-
 **Turn off workloads outside of business hours** _to reduce energy waste and optimize costs_
 
 :heavy_check_mark: Use [Keda Cron scaler](https://keda.sh/docs/2.7/scalers/cron/), to turn off applications (scale pods to zero), outside regular business hours.
@@ -163,6 +153,15 @@ As your workload End2End architecture would typically include several Azure serv
  **Assess for Resilience and Performance** _to increase ability to react to failures, allowing for a more optimized fault handling._
 
 :heavy_check_mark: Use [load testing](/azure/load-testing/tutorial-identify-performance-regression-with-cicd) and [chaos engineering](/azure/architecture/framework/resiliency/chaos-engineering)
+
+
+**Optimize the collection of logs** _to reduce stored and transmitted logs_
+ 
+:heavy_check_mark: Make sure you are logging and retaining only data that is relevant to your needs.
+
+:heavy_check_mark: [configure data collection rules for AKS Container Insights](/azure/azure-monitor/containers/container-insights-agent-config#data-collection-settings)
+
+:heavy_check_mark: Read more about [in this community blog](https://medium.com/microsoftazure/azure-monitor-for-containers-optimizing-data-collection-settings-for-cost-ce6f848aca32)
 
 
 **Monitor & Optimize**
@@ -189,15 +188,14 @@ Deploy to low-carbon regions
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
    
-**Enable Cluster and node auto-updates**
-Archive log data to long-term storage
+**Enable Cluster and node auto-updates** _to use the latest functionality and security updates to help increase efficiency_
 
  :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
 
  :heavy_check_mark: Configure [Automatic **Linux node updates**](/azure/aks/node-updates-kured)
  
 
-**Use suppored addons**
+**Use suppored addons** _to benefit from trusted updates and regular security patches_
 
 :heavy_check_mark: Use Keda as an [AKS addon](/azure/aks/keda-about)
 
@@ -228,51 +226,58 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 :heavy_check_mark: [Resize node pools](/azure/aks/resize-node-pool) to maximize your applications density (and maximize your nodes usage).
 
 
- **Use Energy Efficient Hardware** _cost-effective and power-efficient _
-
-Evaluate Ampere Altra Arm-based processors for Virtual Machines
+ **Use Energy Efficient Hardware** _to leverage cost-effective and power-efficient compute_
 
  :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 
-**Use SPOT VMs where possible** _otherwise wasted capacity—at significantly reduced prices_
+**Use SPOT VMs where possible** _to leverage unused (and otherwise wasted) capacity—at significantly reduced prices_
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
 
-**Reduce Network travel**
+**Reduce Network travel** _to reduces energy and carbon footprint, impacted by the routing appliances and the distance traveled to transmit data_
 
 :heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
-**Use cloud native network security controls to eliminate unnecessary network traffic**
+
+**Use cloud native network security controls** _to eliminate unnecessary network traffic_
 
 :heavy_check_mark: [Network security groups](/azure/virtual-network/network-security-groups-overview) 
 
 :heavy_check_mark: Use [Network Policies](/azure/aks/use-network-policies)
 
-**Use network security tools with auto-scaling capabilities**
+**Use network security tools with auto-scaling capabilities** _to match demand and reduce costs and energy consumtion_
 
 :heavy_check_mark: Filter [Ingress traffic](/azure/application-gateway/ingress-controller-overview)
 
 :heavy_check_mark: Filter [egress traffic](/azure/aks/limit-egress-traffic)
 
-**Integrate Endpoint Security**
+**Integrate Endpoint Security** _to identify and remediate attacks, which could impact unnecessary resource misusage_
 
 :heavy_check_mark: Enable Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction)
 
-**Scan for vulnerabilities**
+**Scan for vulnerabilities** _to avoid unnecessary resource misusage_
 
 :heavy_check_mark: [Identify vulnerable container images](/azure/defender-for-cloud/defender-for-containers-cicd)
 
 
-**Delete zombie workloads**
+**Delete zombie workloads** _to reduce energy waste and optimize costs_
 
 :heavy_check_mark: Use [ImageCleaner](/azure/aks/image-cleaner) to clean up stale images on your Azure Kubernetes Service cluster
 
-**turnoff nodepools outside regular business hours** _to reduce energy waste and optimize cost_
+**turnoff nodepools outside regular business hours** _to reduce energy waste and optimize costs_
 :heavy_check_mark: Use [cluster stop / start](/azure/aks/start-stop-cluster) and [node pool stop / start](/azure/aks/start-stop-nodepools), for shutting them down outside regular business hours.
 
 :heavy_check_mark: Enforce Kubernetes [Resource Quotas](/azure/aks/operator-best-practices-scheduler#enforce-resource-quotas)
+
+
+**Optimize the collection of logs of clusters** _to reduce stored and transmitted logs_
+ 
+:heavy_check_mark: Read more about the [Cost optimization and Log Analytics](/azure/architecture/framework/services/monitoring/log-analytics/cost-optimization).
+
+:heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
+
 
 **Monitor & Optimize**
 
