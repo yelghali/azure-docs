@@ -45,7 +45,7 @@ Decisions made in one design area can impact or influence decisions across the e
 We recommend that readers familiarize themselves with these design areas, reviewing provided considerations and recommendations to better understand the consequences of encompassed decisions.
 
 ## Sustainability Design considerations for AKS workloads and clusters
- -  As your workload End2End architecture would typically include several Azure services (or 3rd party integration), Sustainability considerations for your AKS workloads (or applications), **should cover the All Key Sustainability Design Areas**
+ -  Sustainability considerations for your AKS workloads (or applications), **should cover the All Key Sustainability Design Areas**
 
  -  In practice, you should consider the hollistic lifecycle of your application, as Business requiements shape Workload design, which will inform cluster design
  
@@ -69,6 +69,9 @@ Making workloads more [sustainable and cloud efficient](/azure/architecture/fram
 ## For Product Teams: Sustainability Checklist for AKS workloads
 
 The following checklist provides recommendations for designing sustainable workloads, hosted on AKS. 
+
+> [!IMPORTANT]
+> As your workload End2End architecture would typically include several Azure services (or 3rd party integration), your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads-and-clusters), for a more comprehensive approach.
 
 **Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
