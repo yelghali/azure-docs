@@ -64,13 +64,12 @@ We recommend that readers familiarize themselves with these design areas, review
 |[Security](concepts-sustainability-security.md)| Implement Security and Optimize log collection for Monitoring & SIEM.|
 
 
+As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
+
 
 ## For Product Teams: Sustainability Checklist for AKS workloads
 
 The following checklist provides recommendations for designing sustainable workloads, hosted on AKS. 
-
-As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
-
 
 **Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
