@@ -71,6 +71,12 @@ The following checklist provides recommendations for designing sustainable workl
 
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
+**Consider Carbon Awareness in your workload design**
+
+:heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
+
+:heavy_check_mark: Consider deploying to data centers close to the consumer
+
 
 **Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
@@ -171,12 +177,6 @@ As your workload End2End architecture would typically include several Azure serv
 
 :heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
-**Consider Carbon Awareness in your workload design**
-
-:heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
-
-:heavy_check_mark: Consider deploying to data centers close to the consumer
-
 
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
@@ -232,10 +232,10 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
  **Use Energy Efficient Hardware** _to leverage cost-effective and power-efficient compute_
 
- :heavy_check_mark: - Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
+ :heavy_check_mark: Evaluate if [nodes with Ampere Altra Arm–based processors](https://azure.microsoft.com/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/) are a good option for your workloads
 
 
-**Use SPOT VMs where possible** _to leverage unused (and otherwise wasted) capacity—at significantly reduced prices_
+**Use SPOT Nodes where possible** _to leverage unused (and otherwise wasted) capacity—at significantly reduced prices_
 
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
@@ -288,7 +288,7 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 
 :heavy_check_mark: Use [Best Practices for Monitoring Microservices Application on AKS](/azure/architecture/microservices/logging-monitoring)
 
-**Consider Carbon Awareness in your workload orchestration**
+**Consider Carbon Awareness for your workload orchestration**
 
 :heavy_check_mark: Consider optimizing workloads when knowing that the energy mix comes mostly from renewable energy sources
 
