@@ -150,6 +150,8 @@ Deploy to low-carbon regions
  
 :heavy_check_mark: Make sure you are logging and retaining only data that is relevant to your needs.
 
+:heavy_check_mark: [configure data collection rules for AKS Container Insights](/azure/azure-monitor/containers/container-insights-agent-config#data-collection-settings)
+
 :heavy_check_mark: Read more about the [Cost optimization and Log Analytics](/azure/architecture/framework/services/monitoring/log-analytics/cost-optimization).
 
 :heavy_check_mark: Read more about [Monitoring AKS Data Reference](/azure/aks/monitor-aks-reference)
@@ -183,10 +185,6 @@ Deploy to low-carbon regions
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
 Choose A Region That Is Closest To Users
-
-Filter or exclude log sources before transmission or ingestion into a SIEM
-Use DDoS protection
-
 
 
 
