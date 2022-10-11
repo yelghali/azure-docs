@@ -71,12 +71,6 @@ The following checklist provides recommendations for designing sustainable workl
 
 As your workload End2End architecture would typically include several Azure services (or 3rd party integration) ; your workload design considerations should refer to [Sustainability Design considerations for AKS workloads](#sustainability-design-considerations-for-aks-workloads), for a more comprehensive approach.
 
-**Consider Carbon Awareness in your workload design**
-
-:heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
-
-:heavy_check_mark: Consider deploying to data centers close to the consumer
-
 
 **Optimize code for efficient resource usage** _to optimize workloads at the software level_
 
@@ -181,15 +175,18 @@ As your workload End2End architecture would typically include several Azure serv
 
 ## For Platform Teams: Sustainability Checklist for AKS clusters
 
-Choose A Region That Is Closest To Users
-
-Deploy to the Right Region:
-Select Azure regions based on where the customer resides
-Deploy to low-carbon regions
-
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
-   
+
+**Choose the right Region**
+
+:heavy_check_mark: Evaluate deploying to Regions powered by renewable and low-carbon energy sources
+
+:heavy_check_mark: Evaluate deploying to data centers close to the consumer
+
+:heavy_check_mark: For choosing the right region, Evaluate carbon efficiency, cost, latency, and compliance requirements
+
+
 **Enable Cluster and node auto-updates** _to use the latest functionality and security updates to help increase efficiency_
 
  :heavy_check_mark: Configure [Automatic **Cluster Ugrade**](/azure/aks/auto-upgrade-cluster)
