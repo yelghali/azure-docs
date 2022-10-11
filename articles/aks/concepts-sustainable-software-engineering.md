@@ -96,10 +96,6 @@ As your workload End2End architecture would typically include several Azure serv
 :heavy_check_mark:Use [Keda](https://keda.sh/) to build event driven applications, that could scale to zero when there is no demand
 
 
-Deploy to the Right Region:
-Select Azure regions based on where the customer resides
-Deploy to low-carbon regions
-
 **Maximize Node resource utilization** _to maximize its underying hardware utilization_
 
 :heavy_check_mark: Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
@@ -186,6 +182,9 @@ Deploy to low-carbon regions
 
 Choose A Region That Is Closest To Users
 
+Deploy to the Right Region:
+Select Azure regions based on where the customer resides
+Deploy to low-carbon regions
 
 
 The following checklist provides recommendations for designing energy and hardware efficient AKS clusters, that operate as a "Green Platform". 
@@ -204,7 +203,7 @@ Archive log data to long-term storage
 
 :heavy_check_mark: Use Darp as an [AKS addon](/azure/aks/dapr)
 
- :heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
+:heavy_check_mark: Use [Gitops on AKS to automate cluster & application lifecycle](/azure/architecture/example-scenario/gitops-aks/gitops-blueprint-aks), including testing & compliance.
 
  
 **Utilize Node auto-scaling and bursting capabilities** _to match the scalability needs of workloads_
