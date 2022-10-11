@@ -100,9 +100,10 @@ As your workload End2End architecture would typically include several Azure serv
 
 :heavy_check_mark: Define workloads [resource requests and limits](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits)
 
+:heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
+
 :heavy_check_mark: Use AKS [advanced scheduler features](azure/aks/operator-best-practices-advanced-scheduler) to optimize scheduling your applications (pods), to nodes
 
-:heavy_check_mark: Use [Vertical Pod Auto-scaler](/azure/aks/vertical-pod-autoscaler) to automatically set resource requests and limits on containers per workload based on past usage
 
 **Aim for Stateless Design** _to reduce the in-memory or on-disk data required by the workload to function_
 
@@ -172,8 +173,9 @@ As your workload End2End architecture would typically include several Azure serv
 
 **Consider Carbon Awareness in your workload design**
 
- :heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
- :heavy_check_mark: Consider deploying to data centers close to the consumer
+:heavy_check_mark: Deploy your workloads to Regions powered by renewable and low-carbon energy sources
+
+:heavy_check_mark: Consider deploying to data centers close to the consumer
 
 
 
