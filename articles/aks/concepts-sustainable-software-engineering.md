@@ -193,7 +193,7 @@ The following checklist provides recommendations for designing energy and hardwa
  :heavy_check_mark: Configure [Automatic **Security updates**](/aks/node-upgrade-github-actions)
  
 
-**Use suppored addons** _to benefit from trusted updates and regular security patches_
+**Use supported addons** _to benefit from trusted updates and regular security patches_
 
 :heavy_check_mark: Use Keda as an [AKS addon](/azure/aks/keda-about)
 
