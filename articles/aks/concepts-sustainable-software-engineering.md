@@ -236,7 +236,7 @@ heavy_check_mark: [Size the nodes for storage need](/azure/aks/operator-best-pra
 :heavy_check_mark: Use [SPOT Node pools](/azure/aks/spot-node-pool), to take advantage of unused capacity in Azure data centers while getting a significant discount on the VM.
 
 
-**Reduce Network travel** _to reduces energy and carbon footprint, impacted by the routing appliances and the distance traveled to transmit data_
+**Reduce Network travel** _to reduce energy and carbon footprint, impacted by the routing appliances and the distance traveled to transmit data_
 
 :heavy_check_mark: Consider using [Proximity Placement Groups](/azure/aks/reduce-latency-ppg) to reduce network latency
 
