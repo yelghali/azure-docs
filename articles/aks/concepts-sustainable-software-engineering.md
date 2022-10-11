@@ -47,7 +47,7 @@ Decisions made in one design area can impact or influence decisions across the e
 
 We recommend that readers familiarize themselves with these design areas, reviewing provided considerations and recommendations to better understand the consequences of encompassed decisions.
 
-## Sustainability Design considerations for AKS workloads
+## Sustainability Design considerations for AKS workloads and clusters
  -  Sustainability considerations for your AKS workloads (or applications), **should cover the All Key Sustainability Design Areas**
  -  The sustainability considerations for AKS clusters are aligned with Application Platform Area
  -  In practice, you should consider the hollistic lifecycle of your application, as Business requiements shape Workload design, which will inform cluster design
